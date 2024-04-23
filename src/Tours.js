@@ -17,3 +17,11 @@
 // };
 
 // export default Tours;
+
+import React from 'react';
+
+const Tours = ({ tours, removeTour }) => {
+  return <div>Tours</div>;
+};
+
+export default Tours;
