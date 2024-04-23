@@ -84,6 +84,12 @@ function App() {
     fetchTours();
   }, []);
 
+  if (loading) {
+    <main>
+      <Loading />
+    </main>;
+  }
+
   return (
     <main>
       <Tours tours={tours} removeTours={removeTours} />
