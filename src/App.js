@@ -73,6 +73,16 @@ function App() {
     const newTours = tours.filter(tour => tour.id !== id);
     setTours(newTours);
   };
+  const fetchTours = async () => {
+    const response = await fetch(url);
+    const tours = await response.json();
+    setLoading(false);
+    setTours(tours);
+  };
+
+  useEffect(() => {
+    fetchTours();
+  }, []);
 
   return (
     <main>
